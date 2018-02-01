@@ -9,17 +9,40 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let myGender : Gender = .both
+    let yourGender = Gender.both
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        sayHello(gender: myGender)
+     
+        
+//        let alert = UIAlertController(title: <#T##String?#>, message: <#T##String?#>, preferredStyle: .alert)
+//        UIButton().addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: .touchCancel)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func sayHello(gender : Gender) {
+        print("My Gender is")
+        print(gender.rawValue)
     }
+    
+    func func1(gender : Gender) {
+        
+    }
+    
 
+
+    enum Gender : String {
+        case male
+        case female
+        case both
+    }
+    
+    
 
 }
 
